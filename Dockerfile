@@ -1,6 +1,6 @@
 FROM golang:alpine AS builder
 ADD main.go /go
-RUN CGO_ENABLED=0 go build -o main
+RUN GO111MODULE=auto CGO_ENABLED=0 go build -o main
 
 FROM scratch
 WORKDIR /
