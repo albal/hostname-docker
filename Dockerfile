@@ -5,5 +5,5 @@ RUN CGO_ENABLED=0 go build -o main
 FROM scratch
 WORKDIR /
 COPY --from=builder /go/main /main
-EXPOSE 3000
+EXPOSE 80
 ENTRYPOINT ["/main"]
